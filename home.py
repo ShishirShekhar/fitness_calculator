@@ -5,6 +5,10 @@ from report import report
 
 # Create a list to store input data
 data_list = []
+# Create a variable to store gender value
+gender_value = 0
+# Create a variable to store age
+age_entry = 0
 
 
 # Create a function to display home page
@@ -56,6 +60,7 @@ def name_age_field(window):
     age_label = Label(name_age_frame, text="Age:")
     age_label.grid(column=3, row=0)
     # Create age entry
+    global age_entry
     age_entry = Entry(name_age_frame, bd=1)
     age_entry.grid(column=4, row=0, padx=5)
 
@@ -69,8 +74,11 @@ def gender_field(window):
     # Create label for gender
     gender_label = Label(gender_frame, text="Gender:")
     gender_label.grid(column=0, row=0)
+
     # Create a variable to store gender value using IntVar
+    global gender_value
     gender_value = IntVar()
+
     # Create radio for male and female
     male_radio = Radiobutton(gender_frame, text="Male", variable=gender_value, value=0)
     male_radio.grid(column=1, row=0)
@@ -194,4 +202,4 @@ def check():
             break
     else:
         # Show report window
-        report()
+        report(data_list, gender_value, age_entry)
