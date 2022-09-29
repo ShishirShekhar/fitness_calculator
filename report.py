@@ -1,17 +1,5 @@
 # Import messagebox from tkinter
-from tkinter import messagebox, Tk, Frame, Label
-
-# Create a function to check if data is valid or not
-def check(data_list):
-    # Create a loop to check if the values are valid or not
-    for data in data_list:
-        # Show warning if value is empty
-        if data.get() == "":
-            messagebox.showwarning("Warning", "All values Required")
-            break
-    else:
-        # Show report window
-        report()
+from tkinter import Tk, Frame, Label
 
 
 # Create a function to display report page

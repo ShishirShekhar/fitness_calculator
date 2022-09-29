@@ -1,9 +1,7 @@
 # Import all modules from tkinter
-from tkinter import Tk, Frame, Label, Entry, IntVar, Radiobutton, Button
-# Import other required modules
-from functools import partial
+from tkinter import Tk, Frame, Label, Entry, IntVar, Radiobutton, Button, messagebox
 # Import required function from report
-from report import check
+from report import report
 
 # Create a list to store input data
 data_list = []
@@ -37,7 +35,7 @@ def fields(window):
     data_field(window)
 
     # Create a button to generate report
-    generate = Button(window, text="Generate Report", command=partial(check, data_list), height=2)
+    generate = Button(window, text="Generate Report", command=check, height=2)
     generate.pack(pady=20)
 
 
@@ -184,3 +182,16 @@ def data_field(window):
     cholesterol_entry.grid(column=1, row=10, sticky='e')
     # Add entry to the list
     data_list.append(cholesterol_entry)
+
+
+# Create a function to check if data is valid or not
+def check():
+    # Create a loop to check if the values are valid or not
+    for data in data_list:
+        # Show warning if value is empty
+        if data.get() == "":
+            messagebox.showwarning("Warning", "All values Required")
+            break
+    else:
+        # Show report window
+        report()
