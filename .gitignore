@@ -1,4 +1,8 @@
+.env
 __pycache__
 .idea
 Project allocation WY.odt
 Project DescriptionWY.pdf
+build
+main.spec
+dist
