@@ -1,7 +1,7 @@
 # fitness_calculator
 
 ## 📃 Intro
-This is a fintess caluculator app, which help user to measure their BMI, BP, Pulse Rate, RBC Count, WBC Count, and many more things.
+This is a fitness calculator app, which help user to measure their BMI, BP, Pulse Rate, RBC Count, WBC Count, and many more things.
 
 
 ## ‼ Dependencies
@@ -27,7 +27,7 @@ ____
 
 ____
 
-➡️ Role of MODEL in Fintness Calculator
+➡️ Role of MODEL in Faintness Calculator
 
 ❗ Important Libraries and Modules: Tkinter
 
