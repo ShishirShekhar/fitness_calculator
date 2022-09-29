@@ -1,14 +1,32 @@
 # Import all modules from tkinter
-from tkinter import Button, Frame, Label, Entry, IntVar, Radiobutton
+from tkinter import Tk, Frame, Label, Entry, IntVar, Radiobutton, Button
 # Import other required modules
 from functools import partial
+# Import required function from report
+from report import check
 
 # Create a list to store input data
 data_list = []
 
 
+# Create a function to display home page
+def home():
+    # Create window for home page
+    window = Tk()
+    # Add title of the window
+    window.title("Fitness Calculator")
+    # Add width and height of the window
+    window.geometry('800x800')
+    
+    # Add fields
+    fields(window)
+    
+    # Loop the window display
+    window.mainloop()
+
+
 # Create a function to create different field
-def fields(window, check):
+def fields(window):
     # Create name and age field
     name_age_field(window)
     
