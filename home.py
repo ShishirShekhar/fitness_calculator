@@ -18,7 +18,7 @@ def home():
     # Add title of the window
     window.title("Fitness Calculator")
     # Add width and height of the window
-    window.geometry('800x800')
+    window.geometry('500x600')
     
     # Add fields
     fields(window)
@@ -102,7 +102,7 @@ def data_field(window):
     data_list.append(weight_entry)
 
     # Create a label for height
-    height_label = Label(data_frame, text="Height (cms):")
+    height_label = Label(data_frame, text="Height (Ms):")
     height_label.grid(column=0, row=1, sticky='w')
     # Create height entry
     height_entry = Entry(data_frame, bd=1)

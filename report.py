@@ -115,8 +115,8 @@ def insert_data(re_bmi_entry, re_bp_entry, re_pulse_rate_entry, re_rbc_entry, re
 # Create a function to check bmi
 def bmi(weight, height):
     # Change the values to the integer
-    weight = int(weight)
-    height = int(height)
+    weight = eval(weight)
+    height = eval(height)
 
     return weight / height ** 2
 
@@ -124,8 +124,8 @@ def bmi(weight, height):
 # Create a function to check bp
 def bp_check(low, high):
     # Change the values to the integer
-    low = int(low)
-    high = int(high)
+    low = eval(low)
+    high = eval(high)
 
     # Return Low, Medium, High value accordingly
     if low <= 60 or high <= 90:
@@ -140,8 +140,8 @@ def bp_check(low, high):
 def pulse_check(gender, pulse, age):
     # Change the values to the integer
     gender = int(gender)
-    pulse = int(pulse)
-    age = int(age)
+    pulse = eval(pulse)
+    age = eval(age)
 
     # Return Low, Medium, High value accordingly
     if gender == 0:
@@ -222,7 +222,7 @@ def pulse_check(gender, pulse, age):
 def rbc_check(gender, rbc):
     # Change the values to the integer
     gender = int(gender)
-    rbc = int(rbc)
+    rbc = eval(rbc)
 
     # Return Low, Medium, High value accordingly
     if gender == 0:
@@ -244,7 +244,7 @@ def rbc_check(gender, rbc):
 # Create a function to check wbc
 def wbc_check(wbc):
     # Change the values to the integer
-    wbc = int(wbc)
+    wbc = eval(wbc)
 
     # Return Low, Medium, High value accordingly
     if wbc < 4000:
@@ -258,7 +258,7 @@ def wbc_check(wbc):
 # Create a function to check platelets
 def platelets_check(platelets):
     # Change the values to the integer
-    platelets = int(platelets)
+    platelets = eval(platelets)
 
     # Return Low, Medium, High value accordingly
     if platelets < 150000:
@@ -273,7 +273,7 @@ def platelets_check(platelets):
 def hb_check(gender, hb):
     # Change the values to the integer
     gender = int(gender)
-    hb = int(hb)
+    hb = eval(hb)
 
     # Return Low, Medium, High value accordingly
     if gender == 0:
@@ -296,7 +296,7 @@ def hb_check(gender, hb):
 def uric_acid_check(gender, uric_acid):
     # Change the values to the integer
     gender = int(gender)
-    uric_acid = int(uric_acid)
+    uric_acid = eval(uric_acid)
 
     # Return Low, Medium, High value accordingly
     if gender == 0:
@@ -318,7 +318,7 @@ def uric_acid_check(gender, uric_acid):
 # Create a function to check cholesterol
 def cholesterol_check(cholesterol):
     # Change the values to the integer
-    cholesterol = int(cholesterol)
+    cholesterol = eval(cholesterol)
 
     # Return Low, Medium, High value accordingly
     if cholesterol < 200:
