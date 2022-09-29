@@ -142,8 +142,10 @@ def data_field(window):
     cholesterol_entry = Entry(data_frame, bd=1)
     cholesterol_entry.grid(column=1, row=10, sticky='e')
 
+    # Create a list of datas
     data_list = [weight_entry.get(), height_entry.get(), bp_low_entry.get(), bp_high_entry.get(),
                  pulse_rate_entry.get(), rbc_entry.get(), wbc_entry.get(), platelets_entry.get(), hb_entry.get(),
                  uric_acid_entry.get(), cholesterol_entry.get()]
 
+    # Return the data
     return data_list
