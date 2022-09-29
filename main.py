@@ -1,21 +1,23 @@
 # Import all modules from tkinter
 from tkinter import *
+# Import the required functions from the functional_component
+from functional_components import run
+# Import the required functions from the display_functions
+from display_functions import fields
 
 # Create window for the app
 window = Tk()
 # Add title of the window
 window.title("Fitness Calculator")
 # Add width and height of the window
-window.geometry('390x844')
+window.geometry('800x800')
 
-# Create the frame
-frame1 = Frame(window, bg="black", height=6)
-# Create a label
-label1 = Label(frame1, text="", height=100, bg="black")
-# Add/Pack the label in the frame
-label1.pack()
-# Fill the frame in x direction
-frame1.pack(fill='x')
+
+# Run the app
+run(window, fields)
 
 # Loop the window display
 window.mainloop()
+
+
+
