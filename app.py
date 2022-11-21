@@ -7,5 +7,6 @@ def run():
     home()
 
 
-# Run the app
-run()
+if __name__ == '__main__':
+    # Run the app
+    run()
